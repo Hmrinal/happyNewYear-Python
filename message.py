@@ -6,10 +6,13 @@ Created on Fri Jan  1 18:18:40 2021
 @author: MrinalTyagi
 """
 
-import fbchat
-from getpass import getpass
-username = "Mrinal Tyagi"
-client =  fbchat.Client(username, getpass())
+import fbchat 
+from fbchat import Client
+"""from getpass import getpass"""
+import maskpass
+password=maskpass.advpass()
+username = "mrinaltyagi1912"
+client =  fbchat.Client(username, password)
 no_of_friends = int(input("Number of friends: "))
 for i in range(no_of_friends):
     name = str(input("Name of friend: "))
@@ -19,3 +22,11 @@ for i in range(no_of_friends):
     sent = client.send(friend.uid, msg)
     if sent:
         print("Message sent successfully")
+        
+       
+        
+        
+        
+        
+        
+        
